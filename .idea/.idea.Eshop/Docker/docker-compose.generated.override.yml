@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.4"
+services:
+  eshop.api:
+    build:
+      context: "C:\\Users\\qccq\\Desktop\\ztp\\Eshop"
+      dockerfile: "Eshop.API/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net7.0/Eshop.API.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "eshopapi:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\qccq\\.nuget\\packages:/root/.nuget/packages"
+    - "C:\\Users\\qccq\\Desktop\\ztp\\Eshop\\Eshop.API:/app:rw"
+    - "C:\\Users\\qccq\\Desktop\\ztp\\Eshop:/src:rw"
+    working_dir: "/app"
